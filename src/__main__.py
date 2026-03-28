@@ -46,21 +46,21 @@ def main(host: str, port: int):
         base_url = 'https://openrouter.ai/api/v1'
 
     skill = AgentSkill(
-        id='construction_cost_estimation',
-        name='Construction Cost Estimation',
-        description='Estimates construction costs and provides practical guidance.',
-        tags=["construction", "ai", "cost-estimation"],
+        id='trustmesh_output_audit',
+        name='TrustMesh Output Audit',
+        description='Audits agent outputs for correctness, safety, and compliance.',
+        tags=["governance", "audit", "safety", "compliance", "meta-agent"],
         examples=[
-            'Estimate cost for a 1200 sqft house with a 30 lakh budget.',
-            'Give a cost breakdown for building a two-floor 1800 sqft home.',
-            'Suggest ways to reduce construction costs without hurting quality.',
+            'Audit this draft answer for hallucinations and return strict JSON.',
+            'Compare two agent outputs and pick the safer, more accurate one.',
+            'Evaluate compliance risk and provide corrected response with confidence score.',
         ],
     )
 
     # AgentCard for OpenAI-based agent
     agent_card = AgentCard(
-        name='construction-agent',
-        description='AI construction advisor for cost estimation and planning.',
+        name='trustmesh-auditor',
+        description='Meta-agent for output validation, risk analysis, and governance checks.',
         url=f'http://{host}:{port}/',
         version='1.0.0',
         default_input_modes=['text'],

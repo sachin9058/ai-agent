@@ -1,1 +1,1 @@
-# {{AGENT_NAME}} package
+# construction-advisor-agent package
