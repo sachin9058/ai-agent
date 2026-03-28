@@ -1,0 +1,19 @@
+services:
+  construction-agent:
+    build: .
+    container_name: construction-agent
+    environment:
+      - OPENROUTER_API_KEY=your-openrouter-api-key-here
+      - OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
+      - OPENROUTER_MODEL=openai/gpt-4o-mini
+      # Add your custom environment variables here
+    stdin_open: true
+    ports:
+      - "5000:5000"
+    tty: true
+    networks:
+      - agents-net
+
+networks:
+  agents-net:
+    external: true
