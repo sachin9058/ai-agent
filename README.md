@@ -139,11 +139,7 @@ docker-compose up
 
 # Or build manually
 docker build -t your-agent-name .
-docker run -p 5000:5000 \
-    -e OPENROUTER_API_KEY=your-key \
-    -e OPENROUTER_BASE_URL=https://openrouter.ai/api/v1 \
-    -e OPENROUTER_MODEL=openai/gpt-4o-mini \
-    your-agent-name
+docker run -p 5000:5000 your-agent-name
 ```
 
 ## Dependencies

@@ -3,17 +3,12 @@ services:
     build: .
     container_name: construction-agent
     environment:
-      - OPENROUTER_API_KEY=your-openrouter-api-key-here
-      - OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
+      - OPENAI_API_KEY=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
+      - OPENAI_BASE_URL=https://openrouter.ai/api/v1
       - OPENROUTER_MODEL=openai/gpt-4o-mini
-      # Add your custom environment variables here
+      - OPENROUTER_SITE_URL=http://localhost:5000
+      - OPENROUTER_APP_NAME=trustmesh-auditor
     stdin_open: true
     ports:
       - "5000:5000"
     tty: true
-    networks:
-      - agents-net
-
-networks:
-  agents-net:
-    external: true
