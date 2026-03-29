@@ -1,7 +1,7 @@
 [project]
-name = "construction-agent"
+name = "trustmesh-audtor"
 version = "0.1.0"
-description = "AI construction advisor for cost estimation and planning"
+description = "AI trustmesh audtor for agent output evaluation"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

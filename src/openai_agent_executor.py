@@ -40,7 +40,7 @@ class OpenAIAgentExecutor(AgentExecutor):
         if base_url and 'openrouter.ai' in base_url:
             default_headers = {
                 'HTTP-Referer': os.getenv('OPENROUTER_SITE_URL', 'http://localhost:5000'),
-                'X-Title': os.getenv('OPENROUTER_APP_NAME', 'construction-agent'),
+                'X-Title': os.getenv('OPENROUTER_APP_NAME', 'trustmesh-audtor'),
             }
 
         self.client = AsyncOpenAI(
@@ -269,7 +269,7 @@ class OpenAIAgentExecutor(AgentExecutor):
                 message_text += part.root.text
 
         await self._process_request(message_text, context, updater)
-        logger.debug('[construction-advisor-agent] execute exiting')
+        logger.debug('[trustmesh-audtor] execute exiting')
 
     async def cancel(self, context: RequestContext, event_queue: EventQueue):
         # Ideally: kill any ongoing tasks.

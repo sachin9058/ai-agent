@@ -1,13 +1,13 @@
 services:
-  construction-agent:
+  trustmesh-audtor:
     build: .
-    container_name: construction-agent
+    container_name: trustmesh-audtor
     environment:
       - OPENAI_API_KEY=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
       - OPENAI_BASE_URL=https://openrouter.ai/api/v1
       - OPENROUTER_MODEL=openai/gpt-4o-mini
       - OPENROUTER_SITE_URL=http://localhost:5000
-      - OPENROUTER_APP_NAME=trustmesh-auditor
+      - OPENROUTER_APP_NAME=trustmesh-audtor
     stdin_open: true
     ports:
       - "5000:5000"
