@@ -13,22 +13,22 @@ This makes it difficult to trust a single model’s response in real-world appli
 
 ## 💡 Solution
 
-TrustMesh Auditor introduces a **multi-model validation pipeline**:
+TrustMesh Auditor introduces a multi-model validation pipeline:
 
 1. Generate responses from multiple LLMs  
 2. Evaluate outputs for consistency and correctness  
 3. Aggregate and compare responses  
 4. Select or synthesize the most reliable final answer  
 
-This approach improves confidence in AI outputs by introducing **cross-model verification**.
+This approach improves confidence in AI outputs by introducing cross-model verification.
 
 ## 🧠 System Design
 
 The system follows an agent-based architecture:
 
-- **Generator Layer** → collects responses from multiple LLMs  
-- **Auditor Layer** → evaluates responses (consistency, correctness)  
-- **Decision Layer** → selects or refines the final output  
+- Generator Layer → collects responses from multiple LLMs  
+- Auditor Layer → evaluates responses (consistency, correctness)  
+- Decision Layer → selects or refines the final output  
 
 This modular design enables easy extension with new models and evaluation strategies.
 
@@ -42,12 +42,13 @@ This modular design enables easy extension with new models and evaluation strate
 
 ## 🛠️ Tech Stack
 
-- Node.js  
-- TypeScript  
-- LLM APIs / Ollama (for local models)  
-- Prompt Engineering  
+- Python  
+- Docker  
+- LLM APIs / OpenRouter / OpenAI-compatible APIs  
+- A2A (Agent-to-Agent) architecture  
 
 ## 🏗️ Project Structure
+
 
 
 
